@@ -1,0 +1,82 @@
+:root{
+    --maincolor: #2E7EA3;
+    --separatorcolor: #E9E9E9
+}
+body{
+    font-family: Poppins,sans-serif;
+}
+.advertise{
+    background-color: #2E7EA3;
+    height: 50px;
+    color: white;
+    vertical-align: center;
+    font-weight: 500;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: screen;
+}
+
+.selections{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.search{
+    background-color: black;
+    color: white;
+    height: 70px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Icon{
+    width: 30px;
+    height: auto;
+    padding-left: 1em;
+}
+
+.items{
+    display: flex;
+    column-gap: 2em;
+}
+
+.item{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #2E7EA3;
+}
+
+.logo{
+    height: 70px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: #e2e2e2;
+}
+
+.login{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 2em;
+    font-weight: 400;
+}
+
+.profileIcon{
+    height: 20px;
+    padding-bottom: 3px;
+}
+.separator{
+    height: 2px;
+    background-color: var(--separatorcolor);
+    border: none;
+    margin-top: -2.5px;
+}

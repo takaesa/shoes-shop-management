@@ -1,6 +1,8 @@
 :root{
     --maincolor: #2E7EA3;
-    --separatorcolor: #E9E9E9
+    --separatorcolor: #E9E9E9;
+    --font: Poppins,sans-serif;
+    --smoke: #F7F7F6;
 }
 body{
     font-family: Poppins,sans-serif;
@@ -50,7 +52,6 @@ body{
     color: black;
     font-size: 22px;
     font-weight: 700;
-    background-color: #2E7EA3;
 }
 
 .logo{
@@ -79,4 +80,68 @@ body{
     background-color: var(--separatorcolor);
     border: none;
     margin-top: -2.5px;
+}
+.subheader{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    margin-top: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: .6em;
+}
+
+.shopLocation{
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+    width: 260px;
+}
+.location{
+    font-family: var(--font);
+    font-size: 12px;
+    text-decoration: underline;
+    line-height: 20px;
+    padding-left: 1em;
+}
+.openTime{
+    color: #008615;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    flex: 1fr;
+}
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: var(--smoke);
+    border-radius: 10px;
+    text-decoration: underline;
+}
+
+.customerServices{
+    display: flex;
+    padding-right: 1em;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    width: 350px;
+}
+.serviceText{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.vl {
+border-left: 1px solid black;
+height: 20px;
 }

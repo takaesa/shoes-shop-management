@@ -1,4 +1,4 @@
-import "../style.css";
+import "../css/header.css";
 import React from "react";
 import searchIcon from "../svg/search.svg";
 import profile from "../svg/profile-thin.svg";

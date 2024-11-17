@@ -1,0 +1,142 @@
+
+.shop{
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+justify-content: center;}
+body{
+    height: 100px;
+}
+.signIn{
+    display: flex;
+    padding-top: 1em;
+    justify-content: center;
+    color: #797472;
+}
+.advantagesContainer{
+    width: 20%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #797472;
+}
+.advantageItem{
+    padding-left: 30px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.advantageName{
+    font-size: 26px;
+    font-weight: 600;
+}
+.advantageDescription{
+    font-size: 12;
+}
+.advantagesList{
+    display: flex;
+    padding-top: 40px;
+}
+
+.customerStyleReview{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+.customerGrateful{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.scrollContainer{
+    display: block;
+}
+.compliments{
+    padding-top: 40px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 30px;
+}
+.customerStyle{
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: auto;
+    
+}
+.customerImgStyle{
+  width: auto;
+  height: 220px;
+  max-width: 100%;
+  margin-right: 20px;
+} 
+.separator{
+    height: 1px;
+    background-color: black;
+    border: none;
+    margin-top: 40px;    
+}
+.bottom{
+    display: flex;
+    padding-bottom: 10em;
+}
+.join{
+    height: 440px;
+    width: 25%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.shopInformations{
+    height: 340px;
+    width: 1fr;
+    display: flex;
+    padding-top: 70px;
+    padding-left: 150px;
+    column-gap: 5em;
+}
+.firstGift{
+    display: flex;
+    padding-top: 40px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.emailInput{
+    margin-top: 20px;
+    padding-top: 10px;
+    border: none;
+    border-bottom: 1px  solid black;
+    width: 98%;    
+    height: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.vlFooter{
+    border-left: 1px solid black;
+    margin-top: -8px;
+    height: 440px;
+}
+.about{
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.inforContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+}
+.hyperLink{
+    text-decoration: none;
+    color: black;
+}
+

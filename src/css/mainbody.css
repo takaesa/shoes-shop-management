@@ -1,0 +1,147 @@
+
+.trendingSearchContainer{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.trendingSearchItems{
+    display: flex;
+    column-gap: 10px;
+    padding-left: 20px;
+    width: auto;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.trenditem{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #F7F7F6;
+    padding: 11 30;
+    border-radius: 25px;
+    margin-left: 10px;
+    border: none;
+}
+
+.trenditem:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.trendScrollerBtn{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    padding-right: 30px;
+    display: none;
+}
+.fallFlashSales{
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 50px;
+}
+#feedBack{
+    top:40%;
+    right: 5;
+    display: flex;
+    width: 35px;
+    height: 120px;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#feedBack p{
+    color: #fff;
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+.discountContainer{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 30px;
+    overflow: hidden;
+    column-gap: 10px;
+}
+.fallIntoSaving{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+.productList{
+    padding-left: 30px;
+    display: flex;
+    height: 500px;
+}
+.Product{
+    width: 18%;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.favoriteBtn{
+    display: flex;
+    width: 50px;
+    margin-left: auto;
+    margin-right: 5;
+    margin-top: 5;border: none;
+    background-color: transparent;
+}
+.favoriteBtn:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+.favoriteIconHover{
+    display: none;
+}
+.favoriteIcon{
+    display: flex;
+    padding: 3px;
+}
+
+.productPicture{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.productColor{
+    height: 100%;
+}
+.colorList{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.extendedColor{
+    font-size: 16;
+    color: #797472;
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    line-height: 50px;
+    justify-content: center;
+    align-items: center;
+}

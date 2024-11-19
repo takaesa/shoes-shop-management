@@ -8,8 +8,10 @@ import arrowright from "../svg/arrowright.svg";
 import discount4 from "../svg/discount4.svg";
 import favorite from "../svg/favorite.svg";
 import product from "../svg/product.svg";
-import favoriteHover from "../svg/favoriteHover.svg"
-import productColor from "../svg/productColor.svg"
+// import favoriteHover from "../svg/favoriteHover.svg"
+import productColor from "../svg/productColor.svg";
+import starRating from "../svg/starRating.svg"
+import Product from "../component/Product.js"
 
 const Body = () => {
   return (
@@ -147,21 +149,7 @@ const Body = () => {
       <p className="fallIntoSaving">FALL INTO SAVINGS</p>
 
       <div className="productList">
-        <div className="Product">
-          <button className="favoriteBtn"><img className="favoriteIcon" src={favorite} alt="" />
-            <img className="favoriteIconHover" style={{margin:0}} src={favoriteHover} alt="none" /></button>
-
-          <img className="productPicture" src={product} alt="" />
-          
-          <div className="colorList">
-            <img className="productColor" src={productColor} alt=""/>
-            <img className="productColor" src={productColor} alt=""/>
-            <img className="productColor" src={productColor} alt=""/>
-            <div className="extendedColor">
-              + 10{/* {props.productPicture.count} */} Colors
-            </div>
-          </div>
-        </div>
+        <Product/>
       </div>
     </div>
   );

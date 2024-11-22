@@ -8,9 +8,7 @@ body{
     height: 100px;
 }
 .signIn{
-    display: flex;
     padding-top: 1em;
-    justify-content: center;
     color: #797472;
 }
 .advantagesContainer{

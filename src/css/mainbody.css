@@ -82,17 +82,19 @@
     overflow: hidden;
     column-gap: 10px;
 }
-.fallIntoSaving{
+.sectionName{
     font-size: 28px;
     text-transform: uppercase;
     font-weight: 700;
     padding-top: 40px;
     padding-left: 30px;
+    display: flex;
+    align-items: center;
 }
 .productList{
     padding-left: 30px;
     display: flex;
-    column-gap: 40px;
+    column-gap: 42px;
 }
 .Product{
     width: 18%;
@@ -100,9 +102,7 @@
     flex-direction: column;
     background-color: white;
 }
-.Product:hover{
-    cursor: pointer;
-}
+
 .favoriteBtn{
     display: flex;
     width: 50px;
@@ -191,4 +191,18 @@
 
 .starRatingList{
     margin-left: auto;
+}
+.brandContainer{
+    display: flex;
+    height: 120px;
+    padding-left: 30px;
+    column-gap: 10px;
+    overflow: hidden;
+}
+.brandLogo{
+    width: 500px;
+    border: 1px solid #797472;
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
 }

@@ -10,9 +10,12 @@ const Footer = () => {
     <div className="Footer">
       <label className="shop">SHOE PERK- SHOP. EARN. REDEEM. REPEAT</label>
 
+      <div style={{textAlign:"center"}}>
       <a className="signIn" href="man">
         Sign In or Create an Account
       </a>
+      </div>
+      
 
       <div className="advantagesList">
         <div className="advantagesContainer">

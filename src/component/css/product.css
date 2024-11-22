@@ -4,9 +4,7 @@
     flex-direction: column;
     background-color: white;
 }
-.Product:hover{
-    cursor: pointer;
-}
+
 .favoriteBtn{
     display: flex;
     width: 50px;
@@ -17,8 +15,6 @@
 }
 .favoriteBtn:hover{
     cursor: pointer;
-    background-color: white;
-    mix-blend-mode: multiply;
 }
 
 .favoriteIconHover{
@@ -38,7 +34,8 @@
 
 }
 .productColor{
-    height: 100%;
+    height: auto;
+    width: 100%;
     mix-blend-mode: multiply;
 }
 .colorItem{
@@ -57,10 +54,11 @@
     display: flex;
     width: 100%;
     background-color: #f6f6f6;
-    line-height: 60px;
     justify-content: center;
     align-items: center;
+    height: auto;
 }
+
 .brandPriceContainer{
     display: flex;
     padding-top: 15px;
@@ -93,6 +91,13 @@
     width: 90%;
 }
 
-.starRatingList{
+.starList{
     margin-left: auto;
+    height: 24px;
+    text-align: right;
+}
+.scrollContainer{
+    display: block;
+    margin-left: auto;
+    padding-right: 30px;
 }

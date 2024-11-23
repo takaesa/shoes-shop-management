@@ -198,9 +198,11 @@
     padding-left: 30px;
     column-gap: 10px;
     overflow: hidden;
+    padding-right: 30px;
+    padding-bottom: 150px;
 }
 .brandLogo{
-    width: 500px;
+    width: 50%;
     border: 1px solid #797472;
     display: flex;
     object-fit: contain;

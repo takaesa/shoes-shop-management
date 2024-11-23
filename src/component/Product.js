@@ -14,21 +14,21 @@ const Product = (props) => {
           <img className="favoriteIcon" src={favorite} alt="" />
         </button>
 
-        <img className="productPicture" src={product} alt="" />
+        <img id="productPicture" src={product} alt="" />
       </div>
 
       <div className="colorList">
-        <div className="colorItem">
-          <img className="productColor" src={productColor} alt="" />
+        <div id="colorItem">
+          <img id="productColor" src={productColor} alt="" />
         </div>
-        <div className="colorItem">
-          <img className="productColor" src={productColor} alt="" />
+        <div id="colorItem">
+          <img id="productColor" src={productColor} alt="" />
         </div>
-        <div className="colorItem">
-          <img className="productColor" src={productColor} alt="" />
+        <div id="colorItem">
+          <img id="productColor" src={productColor} alt="" />
         </div>
 
-        <div className="extendedColor">
+        <div id="extendedColor">
           + 10{/* {props.productPicture.count} */} Colors
         </div>
       </div>
@@ -37,26 +37,26 @@ const Product = (props) => {
       // onClick={navigator.Navigate()}
       >
         <div className="brandPriceContainer">
-          <div className="brandName">
+          <div id="brandName">
             Product Brand
             {/* {props.brandName} */}
           </div>
           <div className="price">
-            <label className="originalPrice">
+            <label id="originalPrice">
               ${/* {product.originalPrice} */}44.99
             </label>
-            <label className="discountPrice">
+            <label id="discountPrice">
               ${/* {product.discountPrice} */}34.99
             </label>
           </div>
         </div>
 
-        <div className="productName">
+        <div id="productName">
           Product Name AMNBASMNB SADALSKJ DLKASJDLK ASJL KDJ
           {/* {props.productName} */}
         </div>
 
-        <div className="starList">
+        <div id="starList">
           {/* props.imgList */}
           <img src={starRating} alt="" />
           <img src={starRating} alt="" />

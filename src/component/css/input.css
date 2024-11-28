@@ -1,0 +1,66 @@
+:root {
+    --primary_color: #797472;
+    --primary_lite: #797472;
+    --sec_color: black;
+    --bg_color: white;
+}
+
+main {
+    display: flex;
+    padding: 4rem 2rem;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: var(--primary_color);
+    font-size: 16px;
+    flex-grow: 1;
+    padding: 1.2rem 0;
+}
+
+input::placeholder {
+    font-weight: 550;
+    color: var(--primary_lite);
+}
+
+.input_wrapp {
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 3px;
+    width: 100%;
+    justify-content: center;
+}
+
+.input_container:has(input:focus) {
+    border: 1px solid var(--sec_color);
+}
+
+.input_container {
+    border: 1px solid var(--primary_color);
+    display: flex;
+    align-items: center;
+    margin:0;
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: 5px;
+
+}
+
+.input_container .input_icon {
+    font-size: 20px;
+    color: var(--primary_color);
+    height: 20px;
+    padding-right: 5px;
+}
+
+
+.input_wrapper {
+    padding: 1rem 0;
+}
+
+

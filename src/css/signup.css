@@ -1,0 +1,63 @@
+.signup {
+  font-size: 20px;
+  font-weight: 600;
+}
+.giftwhilesignup {
+  text-align: center;
+  width: 20%;
+}
+.signUpInformationContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-self: center;
+}
+.css-0{
+    color:#797472;
+    font-size: 14px;
+    font-weight: 500;
+    margin:0;
+    padding-left: 3px;
+}
+
+#signUpbtn{
+  padding: 1em;
+  background-color: white;
+  display: flex;
+}
+.signup-button {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+button.signup-button:hover {
+  cursor:pointer;
+  background: white;
+  
+  img.signupImg{
+      transform:rotate(200deg);
+  }
+  
+}
+img.signupImg{
+   transition:transform 0.5s ease;   
+  }
+/* .signup-button:active {
+  transform: scale(0.98); 
+} */
+
+/* .button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px; 
+  font-size: 20px; 
+} */
+
+/* .button-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */

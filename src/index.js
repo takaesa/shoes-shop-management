@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './Home/MainScreen.js';
+import App from './Login/SignUp.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

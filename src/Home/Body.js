@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../css/mainbody.css";
 import rightscroller from "../svg/rightscroller.svg";
 import discount1 from "../svg/discount1.svg";

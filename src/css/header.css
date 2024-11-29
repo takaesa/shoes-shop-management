@@ -80,7 +80,7 @@ body{
     height: 2px;
     background-color: var(--separatorcolor);
     border: none;
-    margin-top: -2.5px;
+    margin-top: -1px;
 }
 .subheader{
     display: flex;

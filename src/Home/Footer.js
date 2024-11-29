@@ -12,7 +12,7 @@ const Footer = () => {
       <label className="shop">SHOE PERK- SHOP. EARN. REDEEM. REPEAT</label>
 
       <div style={{textAlign:"center"}}>
-      <a className="signIn" href="/">
+      <a className="signIn" href="/signin">
         Sign In or Create an Account
       </a>
       </div>
@@ -131,7 +131,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr class="separator" />
+      <hr class="footer-separator" />
 
       <div className="bottom">
         <div className="join">

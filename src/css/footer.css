@@ -5,8 +5,7 @@
     font-weight: bold;
 justify-content: center;}
 body{
-    height: 100px;
-}
+height: auto;}
 .signIn{
     padding-top: 1em;
     color: #797472;
@@ -75,15 +74,14 @@ body{
   max-width: 100%;
   margin-right: 20px;
 } 
-.separator{
-    height: 1px;
+.footer-separator{
+    height: 2px;
     background-color: black;
     border: none;
     margin-top: 40px;    
 }
 .bottom{
     display: flex;
-    padding-bottom: 10em;
 }
 .join{
     height: 440px;
@@ -107,7 +105,7 @@ body{
 }
 .emailInput{
     margin-top: 20px;
-    padding-top: 10px;
+    padding-top: 30px;
     border: none;
     border-bottom: 1px  solid black;
     width: 98%;    
@@ -119,7 +117,7 @@ body{
 .vlFooter{
     border-left: 1px solid black;
     margin-top: -8px;
-    height: 440px;
+    height: auto;
 }
 .about{
     padding-bottom: 10px;

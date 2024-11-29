@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
     --primary_color: #797472;
     --primary_lite: #797472;

@@ -38,7 +38,7 @@ body{
 }
 
 .Icon{
-    width: 30px;
+    width: 26px;
     height: auto;
     padding-left: 1em;
 }
@@ -81,6 +81,7 @@ body{
     background-color: var(--separatorcolor);
     border: none;
     margin-top: -1px;
+    margin-bottom: 0;
 }
 .subheader{
     display: flex;
@@ -91,13 +92,15 @@ body{
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: .6em;
+    padding-top: .6em;
+
 }
 
 .shopLocation{
     display: flex;
     align-items: center;
     padding-left: 2em;
-    width: 260px;
+    width: auto;
 }
 .location{
     font-family: var(--font);

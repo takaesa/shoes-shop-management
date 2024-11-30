@@ -4,6 +4,7 @@ import Footer from "../Home/Footer";
 import Input from "../component/Input";
 import signup from "../svg/signup.svg";
 import Checkbox from "./Checkbox";
+import "../css/signup.css"
 import { useState } from "react";
 
 
@@ -73,9 +74,8 @@ const SignUp = () => {
         checked={smsChecked}
         onChange={() => setSmsChecked(!smsChecked)}
       />
-          <div></div>
-
-          <button className="signup-button" style={{display:"flex",alignItems:"center",background:"#000", color:'white',padding:'1em 2.5em 1em 2.5em',borderRadius:15,marginTop:20}}>
+          <div style={{display:"flex", width:'30%'}}>
+          <button className="signup-button" style={{display:"flex",alignItems:"center",background:"#000", color:'white',padding:'1em 2.5em 1em 2.5em',borderRadius:15}}>
             <div className="icon-container">
             <img className="signupImg" src={signup} alt="icon"/>
 
@@ -83,6 +83,9 @@ const SignUp = () => {
             <span style={{fontSize:16,fontWeight:520,paddingLeft:10}}>Sign Up</span>
             
           </button>
+          </div>
+
+          
 
           <p style={{fontSize:16,fontWeight:500,color:'#797472'}}>
            <strong style={{color:"black"}}>Already a member? </strong>If you signed up in-store you just need to use the same email address you provided to the store associate to create your online account.

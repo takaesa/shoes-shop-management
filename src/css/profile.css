@@ -1,0 +1,63 @@
+/* Tabs */
+.tabs {
+    display: flex;
+    background: #f9f9f9;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .tab {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    border-right: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab:last-child {
+    border-right: none;
+  }
+  
+  .tab.active {
+    background: #fff;
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Tab Contents */
+  .tab-contents {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+  }
+  
+  .tab-content {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    height: 10px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #4caf50;
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

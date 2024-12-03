@@ -86,7 +86,7 @@ body{
 .subheader{
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    height: 80px;
     align-items: center;
     margin-top: 0;
     padding-left: 1em;

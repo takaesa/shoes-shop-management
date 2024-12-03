@@ -28,9 +28,7 @@ const Cart = (props) => {
   const handleCheckoutClick = () => {
     setOverlayVisible(true);
   };
-  const handleCloseOverlay = () => {
-    setOverlayVisible(false);
-  };
+
   const handleOverlayBackgroundClick = (e) => {
     if (e.target.className === "overlay") {
       setOverlayVisible(false);
@@ -117,6 +115,7 @@ const Cart = (props) => {
                   color: "#000",
                   textAlign: "left",
                   margin: 0,
+                  paddingTop:20
                 }}
               >
                 DELIVER TO UIT SCHOOL (3{props.count} ITEMS)
@@ -404,7 +403,7 @@ const Cart = (props) => {
       </div>
 
       <div className="sectionName">
-        <p>2X POINTS ON ALL CROCS, ALL MONTH!</p>
+        <p>YOU MAY ALSO LOVE</p>
 
         <div className="productScrollContainer">
           <img style={{ paddingRight: 30 }} src={scrollleftinactive} alt="" />

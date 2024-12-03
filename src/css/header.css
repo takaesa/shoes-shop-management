@@ -38,7 +38,7 @@ body{
 }
 
 .Icon{
-    width: 26px;
+    width: auto;
     height: auto;
     padding-left: 1em;
 }

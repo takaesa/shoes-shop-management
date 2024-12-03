@@ -12,6 +12,7 @@ const Input = ({ ...props }) => {
         {props.icon && <div className="input_icon">{props.icon}</div>}
 
         <input
+          id={props.id}
           type={showPassword ? "text" : props.type}
           placeholder={props.placeholder}
           value={props.value}

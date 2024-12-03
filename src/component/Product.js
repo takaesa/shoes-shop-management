@@ -18,6 +18,7 @@ const Product = (props) => {
       </div>
 
       <div className="colorList">
+        <div style={{width:'100%',display:'flex',gap:5,height:'100%',objectFit:'contain'}}>
         <div id="colorItem">
           <img id="productColor" src={productColor} alt="" />
         </div>
@@ -26,6 +27,8 @@ const Product = (props) => {
         </div>
         <div id="colorItem">
           <img id="productColor" src={productColor} alt="" />
+        </div>
+
         </div>
 
         <div id="extendedColor">

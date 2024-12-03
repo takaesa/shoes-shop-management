@@ -175,7 +175,7 @@ const Body = () => {
       <div className="sectionName">
         <p>2X POINTS ON ALL CROCS, ALL MONTH!</p>
 
-        <div className="scrollContainer">
+        <div className="productScrollContainer">
           <img style={{ paddingRight: 30 }} src={scrollleftinactive} alt="" />
           <img src={scrollrightactive} alt="" />
         </div>
@@ -402,7 +402,7 @@ const Body = () => {
       <div className="sectionName">
         <p>BRANDS OF FALL</p>
 
-        <div className="scrollContainer">
+        <div className="productScrollContainer">
           <img style={{ paddingRight: 30 }} src={scrollleftinactive} alt="" />
           <img src={scrollrightactive} alt="" />
         </div>

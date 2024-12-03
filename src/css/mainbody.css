@@ -93,7 +93,7 @@
 .productList{
     padding-left: 30px;
     display: flex;
-    column-gap: 42px;
+    column-gap: 45px;
 }
 .Product{
     width: 18%;

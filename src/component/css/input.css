@@ -27,7 +27,7 @@ input {
 }
 
 input::placeholder {
-    font-weight: 550;
+    font-weight: 500;
     color: var(--primary_lite);
 }
 

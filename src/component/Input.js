@@ -18,6 +18,7 @@ const Input = ({ ...props }) => {
           value={props.value}
           onChange={props.onChange}
           name={props.name}
+          className={props.className}
         />
         {props.type === "password" && (
           <div className="input_icon" onClick={handleTogglePassword}>

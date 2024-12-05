@@ -19,14 +19,25 @@ const Profile = (...props) => {
     setOverlayAddAddressVisible(true);
   };
 
+  const [isOverlayEditAddressVisible, setOverlayEditAddressVisible] = useState(false);
+  const handleEditAddressClick = () => {
+    setOverlayEditAddressVisible(true);
+  }
+
   const handleOverlayBackgroundClick = (e) => {
     if (e.target.className === "overlayAddAddress") {
       setOverlayAddAddressVisible(false);
     }
+    else if (e.target.className === "overlayEditAddress") {
+      setOverlayEditAddressVisible(false);
+    }
   };
 
-  const handleCancelClick = () => {
+  const handleCancelAddAddressClick = () => {
     setOverlayAddAddressVisible(false);
+  }
+  const handleCancelEditAddressClick = () => {
+    setOverlayEditAddressVisible(false);
   }
 
   const elementRef = useRef(null);
@@ -505,7 +516,7 @@ const Profile = (...props) => {
                         <h2 id="FullName">UIT STUDENT</h2>
                         <p id="detailAddresss">1018 Tran Phu Loc Chau Bao Loc</p>
                         <div style={{ display: 'flex', gap: '2em', paddingTop: 10 }}>
-                          <button className="adjustInformationBtn">Edit</button>
+                          <button className="adjustInformationBtn" onClick={handleEditAddressClick}>Edit</button>
                           <button className="adjustInformationBtn">Delete</button>
                         </div>
                       </div>
@@ -547,6 +558,493 @@ const Profile = (...props) => {
                   <div className="overlayAddAddress" onClick={handleOverlayBackgroundClick}>
                     <div className="overlayAddAddressContent">
                       <div>
+                        <p
+                          style={{
+                            fontSize: 28,
+                            fontWeight: 800,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "30 20 0 20",
+                            textTransform: 'uppercase'
+                          }}
+                        >
+                          add new address
+                        </p>
+                        <p
+                          style={{
+                            fontSize: 18,
+                            fontWeight: 400,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "10 20 15 20",
+                          }}
+                        >
+                          Please fill in the information below
+                        </p>
+                      </div>
+
+                      <div style={{ padding: '0 20 0 20' }}>
+                        <div style={{ display: 'flex' }}>
+                          <p
+                            style={{
+                              fontSize: 18,
+                              fontWeight: 500,
+                              color: "#797472",
+                              textAlign: "left",
+                              margin: 0,
+                              paddingTop: 10,
+                              display: 'flex',
+                              marginLeft: 'auto'
+                            }}
+                          >
+                            *Required
+                          </p>
+                        </div>
+                        <div style={{ display: "flex", gap: 10, flexDirection: 'column', paddingTop: 10, paddingBottom: 10 }}>
+                          <Input className={"profileInput"} type={"text"} placeholder={"Nickname*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"First Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Last Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Home Address*"} />
+                        </div>
+                        <Checkbox
+                          id="defaultAddressCheckbox"
+                          label={defaultAddressLabel}
+                          checked={defaultAddressRemember}
+                          onChange={() => setdefaultAddressRemember(!defaultAddressRemember)}
+                        />
+                        <div style={{ display: 'flex', gap: 20 }}>
+                          <div
+                            id="saveNewAddressInformationBtn"
+                            className="saveInformationBtnContainer"
+                          >
+                            <button className="saveInformationBtn">Save Address</button>
+                          </div>
+
+                          <div
+                            id="cancelNewAddressInformationBtn"
+                            className="cancelNewAddressInformationBtnContainer"
+                            onClick={handleCancelAddAddressClick}
+                          >
+                            <button className="cancelNewAddressInformationBtn">Cancel</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {isOverlayEditAddressVisible && (
+                  <div className="overlayEditAddress" onClick={handleOverlayBackgroundClick}>
+                    <div className="overlayEditAddressContent">
+                      <div>
+                        <p
+                          style={{
+                            fontSize: 28,
+                            fontWeight: 800,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "30 20 0 20",
+                            textTransform: 'uppercase'
+                          }}
+                        >
+                          edit address
+                        </p>
+                        <p
+                          style={{
+                            fontSize: 18,
+                            fontWeight: 400,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "10 20 15 20",
+                          }}
+                        >
+                          Please fill in the information below
+                        </p>
+                      </div>
+
+                      <div style={{ padding: '0 20 0 20' }}>
+                        <div style={{ display: 'flex' }}>
+                          <p
+                            style={{
+                              fontSize: 18,
+                              fontWeight: 500,
+                              color: "#797472",
+                              textAlign: "left",
+                              margin: 0,
+                              paddingTop: 10,
+                              display: 'flex',
+                              marginLeft: 'auto'
+                            }}
+                          >
+                            *Required
+                          </p>
+                        </div>
+                        <div style={{ display: "flex", gap: 10, flexDirection: 'column', paddingTop: 10, paddingBottom: 10 }}>
+                          <Input className={"profileInput"} type={"text"} placeholder={"Nickname*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"First Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Last Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Home Address*"} />
+                        </div>
+                        <Checkbox
+                          id="defaultAddressCheckbox"
+                          label={defaultAddressLabel}
+                          checked={defaultAddressRemember}
+                          onChange={() => setdefaultAddressRemember(!defaultAddressRemember)}
+                        />
+                        <div style={{ display: 'flex', gap: 20 }}>
+                          <div
+                            id="saveNewAddressInformationBtn"
+                            className="saveInformationBtnContainer"
+                          >
+                            <button className="saveInformationBtn">Save Address</button>
+                          </div>
+
+                          <div
+                            id="cancelNewAddressInformationBtn"
+                            className="cancelNewAddressInformationBtnContainer"
+                            onClick={handleCancelEditAddressClick}
+                          >
+                            <button className="cancelNewAddressInformationBtn">Cancel</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+              </div>
+            )}
+            {activeTab === "payment-settings" && (
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: 20 }}
+              >
+                <div className="summaryName">
+                  <div
+                    style={{
+                      backgroundColor: "rgb(239 239 239)",
+                      borderBottom: "1px solid black",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontSize: 24,
+                        fontWeight: 600,
+                        color: "#000",
+                        textAlign: "left",
+                        margin: 0,
+                        padding: "20 20 15 20",
+                      }}
+                    >
+                      PAYMENT
+                    </p>
+                  </div>
+
+                  <div className="personalAddresses">
+                    <div className="addressesContainer">
+                      {/* addresses layout */}
+                      <div>
+                        <p id="defaultPayment">Default Payment</p>
+                        <hr id="profile-separator"></hr>
+                        <h2 id="FullName">UIT STUDENT</h2>
+                        <p id="detailBankAccountInformation">Number: 090192039{props.bankaccountnumber}</p>
+                        <p id="detailBankAccountInformation">Bank: BIDV{props.bankaccountname}</p>
+
+                        <div style={{ display: 'flex', gap: '2em', paddingTop: 10 }}>
+                          <button className="adjustInformationBtn">Delete</button>
+                        </div>
+                      </div>
+                      <div>
+                        <p id="defaultPayment">Nickname</p>
+                        <hr id="profile-separator"></hr>
+                        <h2 id="FullName">UIT STUDENT</h2>
+                        <p id="detailBankAccountInformation">Number: 090192039{props.bankaccountnumber}</p>
+                        <p id="detailBankAccountInformation">Bank: BIDV{props.bankaccountname}</p>
+
+                        <div style={{ display: 'flex', gap: '2em', paddingTop: 10 }}>
+                          <button className="adjustInformationBtn">Delete</button>
+                        </div>
+                      </div>
+
+                    </div>
+                    <p
+                      style={{
+                        fontSize: 16,
+                        fontWeight: 600,
+                        color: "#000",
+                        textAlign: "center",
+                        margin: 0,
+                        padding: "90 20 15 20",
+                        display: 'none'
+                      }}
+                    >
+                      You currently don't have any addresses saved to your account.
+                    </p>
+                    <div
+                      id="addNewAddressBtn"
+                      className="addNewAddressBtnContainer"
+                      onClick={handleAddAddressClick}
+                    >
+                      <button className="addNewAddressBtn">Add New Address</button>
+                    </div>
+                  </div>
+                </div>
+
+                {isOverlayAddAddressVisible && (
+                  <div className="overlayAddAddress" onClick={handleOverlayBackgroundClick}>
+                    <div className="overlayAddAddressContent">
+                      <div>
+                        <p
+                          style={{
+                            fontSize: 28,
+                            fontWeight: 800,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "30 20 0 20",
+                            textTransform: 'uppercase'
+                          }}
+                        >
+                          add new address
+                        </p>
+                        <p
+                          style={{
+                            fontSize: 18,
+                            fontWeight: 400,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "10 20 15 20",
+                          }}
+                        >
+                          Please fill in the information below
+                        </p>
+                      </div>
+
+                      <div style={{ padding: '0 20 0 20' }}>
+                        <div style={{ display: 'flex' }}>
+                          <p
+                            style={{
+                              fontSize: 18,
+                              fontWeight: 500,
+                              color: "#797472",
+                              textAlign: "left",
+                              margin: 0,
+                              paddingTop: 10,
+                              display: 'flex',
+                              marginLeft: 'auto'
+                            }}
+                          >
+                            *Required
+                          </p>
+                        </div>
+                        <div style={{ display: "flex", gap: 10, flexDirection: 'column', paddingTop: 10, paddingBottom: 10 }}>
+                          <Input className={"profileInput"} type={"text"} placeholder={"Nickname*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"First Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Last Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Home Address*"} />
+                        </div>
+                        <Checkbox
+                          id="defaultAddressCheckbox"
+                          label={defaultAddressLabel}
+                          checked={defaultAddressRemember}
+                          onChange={() => setdefaultAddressRemember(!defaultAddressRemember)}
+                        />
+                        <div style={{ display: 'flex', gap: 20 }}>
+                          <div
+                            id="saveNewAddressInformationBtn"
+                            className="saveInformationBtnContainer"
+                          >
+                            <button className="saveInformationBtn">Save Address</button>
+                          </div>
+
+                          <div
+                            id="cancelNewAddressInformationBtn"
+                            className="cancelNewAddressInformationBtnContainer"
+                            onClick={handleCancelAddAddressClick}
+                          >
+                            <button className="cancelNewAddressInformationBtn">Cancel</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {isOverlayEditAddressVisible && (
+                  <div className="overlayEditAddress" onClick={handleOverlayBackgroundClick}>
+                    <div className="overlayEditAddressContent">
+                      <div>
+                        <p
+                          style={{
+                            fontSize: 28,
+                            fontWeight: 800,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "30 20 0 20",
+                            textTransform: 'uppercase'
+                          }}
+                        >
+                          edit address
+                        </p>
+                        <p
+                          style={{
+                            fontSize: 18,
+                            fontWeight: 400,
+                            color: "#000",
+                            textAlign: "center",
+                            margin: 0,
+                            padding: "10 20 15 20",
+                          }}
+                        >
+                          Please fill in the information below
+                        </p>
+                      </div>
+
+                      <div style={{ padding: '0 20 0 20' }}>
+                        <div style={{ display: 'flex' }}>
+                          <p
+                            style={{
+                              fontSize: 18,
+                              fontWeight: 500,
+                              color: "#797472",
+                              textAlign: "left",
+                              margin: 0,
+                              paddingTop: 10,
+                              display: 'flex',
+                              marginLeft: 'auto'
+                            }}
+                          >
+                            *Required
+                          </p>
+                        </div>
+                        <div style={{ display: "flex", gap: 10, flexDirection: 'column', paddingTop: 10, paddingBottom: 10 }}>
+                          <Input className={"profileInput"} type={"text"} placeholder={"Nickname*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"First Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Last Name*"} />
+                          <Input className={"profileInput"} type={"text"} placeholder={"Home Address*"} />
+                        </div>
+                        <Checkbox
+                          id="defaultAddressCheckbox"
+                          label={defaultAddressLabel}
+                          checked={defaultAddressRemember}
+                          onChange={() => setdefaultAddressRemember(!defaultAddressRemember)}
+                        />
+                        <div style={{ display: 'flex', gap: 20 }}>
+                          <div
+                            id="saveNewAddressInformationBtn"
+                            className="saveInformationBtnContainer"
+                          >
+                            <button className="saveInformationBtn">Save Address</button>
+                          </div>
+
+                          <div
+                            id="cancelNewAddressInformationBtn"
+                            className="cancelNewAddressInformationBtnContainer"
+                            onClick={handleCancelEditAddressClick}
+                          >
+                            <button className="cancelNewAddressInformationBtn">Cancel</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+              </div>
+            )}
+            {activeTab === "orders" && (
+              <div
+              style={{ display: "flex", flexDirection: "column", gap: 20 }}
+            >
+              <div className="summaryName">
+                <div
+                  style={{
+                    backgroundColor: "rgb(239 239 239)",
+                    borderBottom: "1px solid black",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: 24,
+                      fontWeight: 600,
+                      color: "#000",
+                      textAlign: "left",
+                      margin: 0,
+                      padding: "20 20 15 20",
+                    }}
+                  >
+                    ORDERS
+                  </p>
+                </div>
+
+                <div className="orders">
+                  <div className="ordersContainer">
+                    <div>
+                      <p id="defaultPayment">Default Payment</p>
+                      <hr id="profile-separator"></hr>
+                      <h2 id="FullName">UIT STUDENT</h2>
+                      <p id="detailBankAccountInformation">Number: 090192039{props.bankaccountnumber}</p>
+                      <p id="detailBankAccountInformation">Bank: BIDV{props.bankaccountname}</p>
+
+                      <div style={{ display: 'flex', gap: '2em', paddingTop: 10 }}>
+                        <button className="adjustInformationBtn">Delete</button>
+                      </div>
+                    </div>
+                    <div>
+                      <p id="defaultPayment">Nickname</p>
+                      <hr id="profile-separator"></hr>
+                      <h2 id="FullName">UIT STUDENT</h2>
+                      <p id="detailBankAccountInformation">Number: 090192039{props.bankaccountnumber}</p>
+                      <p id="detailBankAccountInformation">Bank: BIDV{props.bankaccountname}</p>
+
+                      <div style={{ display: 'flex', gap: '2em', paddingTop: 10 }}>
+                        <button className="adjustInformationBtn">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    style={{
+                      fontSize: 16,
+                      fontWeight: 600,
+                      color: "#000",
+                      textAlign: "center",
+                      margin: 0,
+                      padding: "90 20 15 20",
+                      display: 'none'
+                    }}
+                  >
+                    You currently don't have any addresses saved to your account.
+                  </p>
+                  <div
+                    id="addNewAddressBtn"
+                    className="addNewAddressBtnContainer"
+                    onClick={handleAddAddressClick}
+                  >
+                    <button className="addNewAddressBtn">Add New Address</button>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+              {isOverlayAddAddressVisible && (
+                <div className="overlayAddAddress" onClick={handleOverlayBackgroundClick}>
+                  <div className="overlayAddAddressContent">
+                    <div>
                       <p
                         style={{
                           fontSize: 28,
@@ -572,9 +1070,9 @@ const Profile = (...props) => {
                       >
                         Please fill in the information below
                       </p>
-                      </div>
-                      
-                      <div style={{padding:'0 20 0 20'}}>
+                    </div>
+
+                    <div style={{ padding: '0 20 0 20' }}>
                       <div style={{ display: 'flex' }}>
                         <p
                           style={{
@@ -591,11 +1089,11 @@ const Profile = (...props) => {
                           *Required
                         </p>
                       </div>
-                      <div style={{ display: "flex", gap: 10, flexDirection: 'column', paddingTop: 10,paddingBottom:10 }}>
+                      <div style={{ display: "flex", gap: 10, flexDirection: 'column', paddingTop: 10, paddingBottom: 10 }}>
                         <Input className={"profileInput"} type={"text"} placeholder={"Nickname*"} />
                         <Input className={"profileInput"} type={"text"} placeholder={"First Name*"} />
                         <Input className={"profileInput"} type={"text"} placeholder={"Last Name*"} />
-                        <Input className={"profileInput"} type={"text"} placeholder={"Street Address*"} />
+                        <Input className={"profileInput"} type={"text"} placeholder={"Home Address*"} />
                       </div>
                       <Checkbox
                         id="defaultAddressCheckbox"
@@ -603,42 +1101,113 @@ const Profile = (...props) => {
                         checked={defaultAddressRemember}
                         onChange={() => setdefaultAddressRemember(!defaultAddressRemember)}
                       />
-                      <div style={{display:'flex', gap:20}}>
-                      <div
-                        id="saveNewAddressInformationBtn"
-                        className="saveInformationBtnContainer"
-                      >
-                        <button className="saveInformationBtn">Save Address</button>
+                      <div style={{ display: 'flex', gap: 20 }}>
+                        <div
+                          id="saveNewAddressInformationBtn"
+                          className="saveInformationBtnContainer"
+                        >
+                          <button className="saveInformationBtn">Save Address</button>
+                        </div>
+
+                        <div
+                          id="cancelNewAddressInformationBtn"
+                          className="cancelNewAddressInformationBtnContainer"
+                          onClick={handleCancelAddAddressClick}
+                        >
+                          <button className="cancelNewAddressInformationBtn">Cancel</button>
+                        </div>
+
                       </div>
 
-                      <div
-                        id="cancelNewAddressInformationBtn"
-                        className="cancelNewAddressInformationBtnContainer"
-                        onClick={handleCancelClick}
-                      >
-                        <button className="cancelNewAddressInformationBtn">Cancel</button>
-                      </div>  
-
-                      </div>
-                      
-                      </div>
                     </div>
                   </div>
-                )}
+                </div>
+              )}
 
-              </div>
-            )}
-            {activeTab === "payment-settings" && (
-              <div className="tab-content">
-                <h2>Payment Settings</h2>
-                <p>Manage your payment methods securely.</p>
-              </div>
-            )}
-            {activeTab === "orders" && (
-              <div className="tab-content">
-                <h2>Your Most Recent Order</h2>
-                <p>You currently don't have any recent orders.</p>
-              </div>
+              {isOverlayEditAddressVisible && (
+                <div className="overlayEditAddress" onClick={handleOverlayBackgroundClick}>
+                  <div className="overlayEditAddressContent">
+                    <div>
+                      <p
+                        style={{
+                          fontSize: 28,
+                          fontWeight: 800,
+                          color: "#000",
+                          textAlign: "center",
+                          margin: 0,
+                          padding: "30 20 0 20",
+                          textTransform: 'uppercase'
+                        }}
+                      >
+                        edit address
+                      </p>
+                      <p
+                        style={{
+                          fontSize: 18,
+                          fontWeight: 400,
+                          color: "#000",
+                          textAlign: "center",
+                          margin: 0,
+                          padding: "10 20 15 20",
+                        }}
+                      >
+                        Please fill in the information below
+                      </p>
+                    </div>
+
+                    <div style={{ padding: '0 20 0 20' }}>
+                      <div style={{ display: 'flex' }}>
+                        <p
+                          style={{
+                            fontSize: 18,
+                            fontWeight: 500,
+                            color: "#797472",
+                            textAlign: "left",
+                            margin: 0,
+                            paddingTop: 10,
+                            display: 'flex',
+                            marginLeft: 'auto'
+                          }}
+                        >
+                          *Required
+                        </p>
+                      </div>
+                      <div style={{ display: "flex", gap: 10, flexDirection: 'column', paddingTop: 10, paddingBottom: 10 }}>
+                        <Input className={"profileInput"} type={"text"} placeholder={"Nickname*"} />
+                        <Input className={"profileInput"} type={"text"} placeholder={"First Name*"} />
+                        <Input className={"profileInput"} type={"text"} placeholder={"Last Name*"} />
+                        <Input className={"profileInput"} type={"text"} placeholder={"Home Address*"} />
+                      </div>
+                      <Checkbox
+                        id="defaultAddressCheckbox"
+                        label={defaultAddressLabel}
+                        checked={defaultAddressRemember}
+                        onChange={() => setdefaultAddressRemember(!defaultAddressRemember)}
+                      />
+                      <div style={{ display: 'flex', gap: 20 }}>
+                        <div
+                          id="saveNewAddressInformationBtn"
+                          className="saveInformationBtnContainer"
+                        >
+                          <button className="saveInformationBtn">Save Address</button>
+                        </div>
+
+                        <div
+                          id="cancelNewAddressInformationBtn"
+                          className="cancelNewAddressInformationBtnContainer"
+                          onClick={handleCancelEditAddressClick}
+                        >
+                          <button className="cancelNewAddressInformationBtn">Cancel</button>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              )}
+
+            </div>
             )}
             {activeTab === "favorites" && (
               <div className="tab-content">

@@ -1,0 +1,42 @@
+.productSpecificInformationText {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    padding-top: 10px;
+  }
+  .greenPrice {
+    font-size: 16px;
+    font-weight: 400;
+    color: #008615;
+    padding-left: 10px;
+  }
+  .productOriginalPrice {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    padding-top: 10px;
+    text-decoration: line-through;
+  }
+  .orderProductContainer {
+      display: grid;
+      width: 100%;
+      height: fit-content;
+      grid-template-columns: 30% 70%;
+      border: 1px solid black;
+      border-radius: 10px;
+  }
+  .orderProductImgContainer{
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+  }
+  .removeBtnTxt{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+  }

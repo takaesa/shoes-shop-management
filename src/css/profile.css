@@ -337,13 +337,19 @@
   font-weight: 500;
 }
 .orders{
-  padding: 40px 0 40px 40px;
-  height: 100%;
+  padding: 20px 0 20px 20px;
   min-height: 420px;
+  height: fit-content;
+  max-height: 900px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  position: relative;
+  scrollbar-width: none;
 }
 .ordersContainer{
   display: grid;
-  grid-template-columns: 45% 45%;
-  padding: 20px;
-  gap: 5%;
+  grid-template-columns: 49% 49%;
+  column-gap: 1%;
+  row-gap: 2%;
 }

@@ -43,16 +43,43 @@ body{
     padding-left: 1em;
 }
 
-.items{
+.menuContainer{
     display: flex;
     column-gap: 2em;
 }
 
-.item{
+.menuItem{
     text-decoration: none;
     color: black;
     font-size: 22px;
     font-weight: 700;
+}
+.menuOverlay{
+    display: flex;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: black;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+    height: 100px;
+    padding: 15px;
+}
+.menuOverlayContent h3{
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.menuOverlayContent ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+.menuOverlayContent ul li{
+    margin-bottom: 8px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .logo{

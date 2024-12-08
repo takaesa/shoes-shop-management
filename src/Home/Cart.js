@@ -271,10 +271,7 @@ const Cart = (props) => {
                       className={selected === "Cash on Delivery" ? "buttonActive" : "buttonInactive"}
                       onClick={() => setSelected("Cash on Delivery")}
                     >
-
                       Cash on Delivery
-
-
                     </button>
                     <button
                       className={selected === "Banking Online" ? "buttonActive" : "buttonInactive"}

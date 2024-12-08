@@ -25,7 +25,6 @@
     border: 1px solid black;
     border-radius: 10px;
 }
-/* style={{width:'100%',aspectRatio:'1/1',objectFit:'contain',display:'flex',justifyContent:'center',alignContent:'center'}}*/
 .favoriteProductImgContainer{
     width: 100%;
     aspect-ratio: 1/1;

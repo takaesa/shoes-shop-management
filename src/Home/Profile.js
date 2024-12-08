@@ -57,7 +57,7 @@ const Profile = (...props) => {
 
 
   }, []);
-  const [activeTab, setActiveTab] = useState("favorites");
+  const [activeTab, setActiveTab] = useState("account");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);

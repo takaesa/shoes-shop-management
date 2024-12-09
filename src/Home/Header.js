@@ -31,30 +31,7 @@ function Login(props) {
 }
 
 function Header() {
-  const [hoveredMenu, sethoveredMenu] = useState(null)
-
-  const menuItems = {
-    WOMANS:{
-      title:"ATHLETICS & SNEAKERS",
-      items:["Fashion & Lifestyle","Platform", "High Top", "Training & Gym", "Running"]
-    },
-    MENS:{
-      title:"ATHLETICS & SNEAKERS",
-      items:["Fashion & Lifestyle","Platform", "High Top", "Training & Gym", "Running"]
-    },
-    KIDS:{
-      title:"ATHLETICS & SNEAKERS",
-      items:["Fashion & Lifestyle","Platform", "High Top", "Training & Gym", "Running"]
-    }
-  }
-  const handleMouseEnter = (menuKey) => {
-    sethoveredMenu(menuKey)
-  }
-  const handleMouseLeave = () => {
-    sethoveredMenu(null)
-  }
-
-  return (
+    return (
     <div className="header">
       <div className="advertise">
         Get $10 back on pick up orders, FREE delivery, & more! Join Now!
@@ -62,30 +39,26 @@ function Header() {
       <div className="selections">
         <div className="logo">Logo</div>
         <div className="menuContainer">
-          {Object.keys(menuItems).map((menuKey) =>(
-            <div
-            key={menuKey}
-            className="menuItem"
-            onMouseEnter={() => handleMouseEnter(menuKey)}
-            onMouseLeave={handleMouseLeave}
-          >
-            {menuKey}
-          </div>
-          ))}
-          {hoveredMenu && (
-            <div className="" onMouseEnter={()=>handleMouseEnter(hoveredMenu)} onMouseLeave={handleMouseLeave}>
-              <div className="menuOverlayContent">
-                <h3>{menuItems[hoveredMenu].title}</h3>
-                <ul>
-                  {menuItems[hoveredMenu].items.map((item,index)=>(
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
           <a className="menuItem" href="woman">
             WOMAN
+          </a>
+          <a className="menuItem" href="woman">
+          MENS
+          </a>
+          <a className="menuItem" href="woman">
+          KIDS
+          </a>
+          <a className="menuItem" href="woman">
+          ACCESSORIES
+          </a>
+          <a className="menuItem" href="woman">
+          BRANDS
+          </a>
+          <a className="menuItem" href="woman">
+          DEALS
+          </a>
+          <a className="menuItem" href="woman">
+          NIKE DEALS
           </a>
         </div>
         <Login></Login>

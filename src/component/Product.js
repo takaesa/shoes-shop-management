@@ -18,17 +18,16 @@ const Product = (props) => {
       </div>
 
       <div className="colorList">
-        <div style={{width:'100%',display:'flex',gap:5,height:'100%',objectFit:'contain'}}>
-        <div id="colorItem">
-          <img id="productColor" src={productColor} alt="" />
-        </div>
-        <div id="colorItem">
-          <img id="productColor" src={productColor} alt="" />
-        </div>
-        <div id="colorItem">
-          <img id="productColor" src={productColor} alt="" />
-        </div>
-
+        <div style={{ width: '100%', display: 'grid', gap: 5, height: '100%', objectFit: 'contain', gridTemplateColumns:'33% 33% 33%'}}>
+          <div id="colorItem">
+            <img id="productColor" src={productColor} alt="" />
+          </div>
+          <div id="colorItem">
+            <img id="productColor" src={productColor} alt="" />
+          </div>
+          <div id="colorItem">
+            <img id="productColor" src={productColor} alt="" />
+          </div>
         </div>
 
         <div id="extendedColor">

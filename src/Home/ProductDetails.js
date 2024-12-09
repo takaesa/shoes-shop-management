@@ -8,11 +8,11 @@ import { useState } from "react";
 import instore from "../svg/instore.svg"
 import delivery from "../svg/delivery.svg"
 import shipping from "../svg/shipping.svg"
-import opendetail from "../svg/opendetail.svg"
-import closedetail from "../svg/closedetail.svg"
 import scrollleftinactive from "../svg/scrollleftinactive.svg";
 import scrollrightactive from "../svg/scrollrightactive.svg";
 import Product from "../component/Product.js";
+
+import { Link } from "react-router-dom";
 const ProductDetails = (...props) => {
 
     const [productSizeSelected, productSizeSetSelected] = useState("6");
@@ -54,7 +54,6 @@ const ProductDetails = (...props) => {
                         </li>
                     </ol>
                 </nav>
-
                 <div className="productDetailsLayout">
                     <div className="productGallery">
                         <div className="imgItemContainer">

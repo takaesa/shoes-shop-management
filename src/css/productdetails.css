@@ -116,16 +116,16 @@
   cursor: pointer;
   color: white;
 }
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
 .changeStoreBtnContainer {
   display: flex;
   justify-content: center;
   margin-left: auto;
   width: auto;
-}
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
 }
 .changeStoreBtn {
   display: flex;

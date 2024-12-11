@@ -21,25 +21,36 @@ import shopmoto from "../svg/shopmoto.svg";
 import shopchelsea from "../svg/shopchelsea.svg";
 import shoplaceup from "../svg/shoplaceup.svg";
 import shopwestern from "../svg/shopwestern.svg";
+import { useState, useEffect } from "react";
 
 const Body = () => {
+  // const BrandNameLink = 'https://localhost:7143/ProductBrand'
+
+  // const [brandName, setBrandNames] = useState([]);
+  // useEffect(() => {
+  //   fetch(BrandNameLink, { mode: 'no-cors'})
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       console.log(data);
+  //       setBrandNames(data);
+  //     });
+  // }, []);
   return (
+
     <div>
       <div className="trendingSearchContainer">
         <p style={{ fontSize: 14, fontWeight: 500 }}>Trending Searches</p>
 
         <div className="trendingSearchItems">
-          <button className="trenditem">boots</button>
-          <button className="trenditem">shoes</button>
-          <button className="trenditem">sleepings bag</button>
-          <button className="trenditem">boots</button>
-          <button className="trenditem">boots</button>
-          <button className="trenditem">boots</button>
-          <button className="trenditem">boots</button>
-          <button className="trenditem">boots</button>
-          <button className="trenditem">boots</button>
-          <button className="trenditem">boots</button>
-          <button className="trenditem">boots</button>
+          {/* {
+            brandName.map(
+                (item) => 
+                  (<button className="trenditem">{item.productBrandName}</button>)
+            )
+          } */}
+          <button className="trenditem"><a href="/productPage">MSI</a></button>
         </div>
 
         <button className="trendScrollerBtn">
@@ -158,7 +169,7 @@ const Body = () => {
       <div className="sectionName">
         <p>FALL INTO SAVINGS</p>
 
-        <div className="productScrollContainer">
+        <div style={{ display: 'flex' }} className="productScrollContainer">
           <img style={{ paddingRight: 30 }} src={scrollleftinactive} alt="" />
           <img src={scrollrightactive} alt="" />
         </div>
@@ -175,7 +186,7 @@ const Body = () => {
       <div className="sectionName">
         <p>2X POINTS ON ALL CROCS, ALL MONTH!</p>
 
-        <div className="productScrollContainer">
+        <div style={{ display: 'flex' }} className="productScrollContainer">
           <img style={{ paddingRight: 30 }} src={scrollleftinactive} alt="" />
           <img src={scrollrightactive} alt="" />
         </div>
@@ -402,7 +413,7 @@ const Body = () => {
       <div className="sectionName">
         <p>BRANDS OF FALL</p>
 
-        <div className="productScrollContainer">
+        <div style={{ display: 'flex' }} className="productScrollContainer">
           <img style={{ paddingRight: 30 }} src={scrollleftinactive} alt="" />
           <img src={scrollrightactive} alt="" />
         </div>
@@ -459,7 +470,7 @@ const Body = () => {
         </div>
       </div>
 
-      
+
     </div>
   );
 };

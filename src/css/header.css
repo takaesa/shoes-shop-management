@@ -138,6 +138,7 @@ body{
 }
 .openTime{
     color: #008615;
+    display: flex;
 }
 .options{
     display: flex;

@@ -22,6 +22,14 @@ import shopchelsea from "../svg/shopchelsea.svg";
 import shoplaceup from "../svg/shoplaceup.svg";
 import shopwestern from "../svg/shopwestern.svg";
 import { useState, useEffect } from "react";
+import adidas from "../svg/adidas.svg"
+import bearpaw from "../svg/bearpaw.svg"
+import birkenstock from "../svg/birkenstock.svg"
+import crocs from "../svg/crocs.svg"
+import heydude from "../svg/heydude.svg"
+import koolaburra from "../svg/koolaburra.svg"
+import newbalance from "../svg/newbalance.svg"
+import nike from "../svg/nike.svg"
 
 const Body = () => {
   // const BrandNameLink = 'https://localhost:7143/ProductBrand'
@@ -421,53 +429,55 @@ const Body = () => {
 
       <div className="brandContainer">
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/Birkenstock_brandmenuBLACK?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={adidas}
             alt=""
           />
         </div>
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/brand-menu-logo-nike?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={birkenstock}
             alt=""
           />
         </div>
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/brand-menu-logo-crocs?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={bearpaw}
             alt=""
           />
         </div>
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/brand-carousel-Adidas24?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={bearpaw}
             alt=""
           />
         </div>
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/brand-carousel-Bearpaw?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={bearpaw}
             alt=""
           />
         </div>
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/brand-menu-KOOLABURRA?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={bearpaw}
             alt=""
           />
         </div>
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/brand-menu-logo-newbalance?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={bearpaw}
             alt=""
           />
         </div>
         <div className="brandLogo">
-          <img
-            src="https://cdn.media.amplience.net/i/scvl/HeyDude_BrandMenuBLACK?fmt=auto&w=160&$common-template$"
+          <img className="brandImage"
+            src={bearpaw}
             alt=""
           />
         </div>
+        
+        
       </div>
 
 

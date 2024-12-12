@@ -5,15 +5,16 @@ import SignUp from "../Login/SignUp";
 import SignIn from "../Login/SignIn";
 import Cart from "../Home/Cart"
 import ProductTypePage from "../Home/ProductTypePage";
-
+import SellerHome from "../Seller/Home"
 const Paths = {
     home: '/',
     productDetails: '/productDetails',
     profile: '/profile',
     signup: '/signup',
     signin: '/signin',
-    cart : '/cart',
-    productPage : '/productPage',
+    cart: '/cart',
+    productPage: '/productPage',
+    sellerHome: '/sellerHome'
 }
 const webRoutes = [
     { path: Paths.home, component: MainScreen },
@@ -21,9 +22,9 @@ const webRoutes = [
     { path: Paths.profile, component: Profile },
     { path: Paths.signup, component: SignUp },
     { path: Paths.signin, component: SignIn },
-    { path: Paths.cart, component: Cart},
-    { path: Paths.productPage, component: ProductTypePage},
-
+    { path: Paths.cart, component: Cart },
+    { path: Paths.productPage, component: ProductTypePage },
+    { path: Paths.sellerHome, component: SellerHome },
 ]
 
 export { webRoutes }

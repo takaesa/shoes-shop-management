@@ -8,14 +8,6 @@
     --bg_color: white;
 }
 
-main {
-    display: flex;
-    padding: 4rem 2rem;
-    gap: 25px;
-    align-items: center;
-    justify-content: center;
-}
-
 input {
     border: none;
     box-shadow: none;
@@ -34,9 +26,9 @@ input::placeholder {
 .input_wrapp {
     display: flex;
     /* border: 1px solid black; */
-    padding: 3px;
     width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .input_container:has(input:focus) {

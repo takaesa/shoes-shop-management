@@ -5,7 +5,10 @@ import SignUp from "../Login/SignUp";
 import SignIn from "../Login/SignIn";
 import Cart from "../Home/Cart"
 import ProductTypePage from "../Home/ProductTypePage";
-import SellerHome from "../Seller/Home"
+import SellerHome from "../Seller/Home";
+import SellerProducts from "../Seller/Products";
+
+
 const Paths = {
     home: '/',
     productDetails: '/productDetails',
@@ -14,7 +17,8 @@ const Paths = {
     signin: '/signin',
     cart: '/cart',
     productPage: '/productPage',
-    sellerHome: '/sellerHome'
+    sellerhome: '/sellerhome',
+    sellerproducts: '/sellerproducts',
 }
 const webRoutes = [
     { path: Paths.home, component: MainScreen },
@@ -24,7 +28,9 @@ const webRoutes = [
     { path: Paths.signin, component: SignIn },
     { path: Paths.cart, component: Cart },
     { path: Paths.productPage, component: ProductTypePage },
-    { path: Paths.sellerHome, component: SellerHome },
+    { path: Paths.sellerhome, component: SellerHome },
+    { path: Paths.sellerproducts, component: SellerProducts },
+
 ]
 
 export { webRoutes }

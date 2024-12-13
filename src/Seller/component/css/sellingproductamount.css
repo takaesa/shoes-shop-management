@@ -27,42 +27,41 @@
   border-bottom-right-radius: 5px;
 }
 .statistic-container {
-  max-width: 800px;
   margin: 0;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
 }
 .change-type-button-container {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
-.change-type-button-container :hover{
-    background-color: white;
-    color: #007BFF;
+.change-type-button-container :hover {
+  background-color: white;
+  color: #007bff;
 }
 .chart-container {
-    position: relative;
-    height: 400px;
-  }
-  .scroll-month-container {
-    margin-top: 20px;
-    text-align: center;
-  }
-  #monthRange {
-    width: 80%;
-    margin: 10px;
-  }
-  
-  #monthValue {
-    font-weight: bold;
-  }
+  position: relative;
+  height: auto;
+}
+.scroll-month-container {
+  margin-top: 20px;
+  text-align: center;
+}
+#monthRange {
+  width: 80%;
+  margin: 10px;
+}
+
+#monthValue {
+  font-weight: bold;
+}

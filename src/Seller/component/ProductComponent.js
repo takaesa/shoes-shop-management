@@ -3,8 +3,11 @@ import "./css/productcomponent.css"
 import Checkbox from '../../Login/Checkbox'
 import { useState } from 'react'
 import product from "../../svg/product.svg"
-const ProductComponent = () => {
-    const [checkbox, setcheckbox] = useState(false);
+const ProductComponent = (...props) => {
+    const [isChecked, setIsChecked] = useState(false);
+    const handleCheckboxChange = () => {
+        setIsChecked((prev) => !prev);
+      };
     const checkboxlabel = "";
     return (
         <div className='sellerProductComponentContainer'>
@@ -12,8 +15,8 @@ const ProductComponent = () => {
                 <div style={{paddingTop:'.8em'}}><Checkbox
                     id="productCheckbox"
                     label={checkboxlabel}
-                    checked={checkbox}
-                    onChange={() => setcheckbox(!checkbox)}
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
                 /></div>
                 
                 <div className='productImgContainer'><img src={product} alt='productimg' /></div>

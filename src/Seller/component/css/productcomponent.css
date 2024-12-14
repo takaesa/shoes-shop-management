@@ -1,10 +1,12 @@
 .sellerProductComponentContainer{
     display: grid;
     grid-template-columns: 40% 15% 15% 10% 10% 10%;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     grid-auto-rows: fit-content;
     height: 90px;
     align-items: center;
+    background-color: white;
 }
 #checkbox_seller{
     display: flex;

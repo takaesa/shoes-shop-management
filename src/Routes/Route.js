@@ -7,6 +7,7 @@ import Cart from "../Home/Cart"
 import ProductTypePage from "../Home/ProductTypePage";
 import SellerHome from "../Seller/Home";
 import SellerProducts from "../Seller/Products";
+import SerllerOrders from "../Seller/Orders";
 
 
 const Paths = {
@@ -19,6 +20,7 @@ const Paths = {
     productPage: '/productPage',
     sellerhome: '/sellerhome',
     sellerproducts: '/sellerproducts',
+    sellerorders: '/sellerorders',
 }
 const webRoutes = [
     { path: Paths.home, component: MainScreen },
@@ -30,6 +32,7 @@ const webRoutes = [
     { path: Paths.productPage, component: ProductTypePage },
     { path: Paths.sellerhome, component: SellerHome },
     { path: Paths.sellerproducts, component: SellerProducts },
+    { path: Paths.sellerorders, component: SerllerOrders },
 
 ]
 

@@ -17,7 +17,7 @@ import addvariation from "../svg/addvariation.svg"
 import { useState } from 'react';
 
 const Products = (...props) => {
-  const [activeContent, setActiveContent] = useState("addNewProduct");
+  const [activeContent, setActiveContent] = useState("productList");
 
   const [isBrandOpen, setisBrandOpen] = useState(false);
 
@@ -231,45 +231,7 @@ const Products = (...props) => {
 
 
               </div>
-              <div className='basicInformationContainer'>
-                <h3 style={{ margin: 0, fontSize: 22, fontWeight: 500, color:'#2E7EA3', padding:'0 0 1em 1em' }}>Sale Information</h3>
 
-                <div style={{ display: 'flex', paddingRight: '10rem', justifyContent: 'flex-end' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', width: '80%' }}>
-                    <p className='productNameLabel'>Variation</p>
-                    <div style={{ width: '80%', margin: 0 }}>
-                      <img className='addVariationIcon' src={addvariation} alt='' />
-                    </div>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', paddingRight: '10rem', justifyContent: 'flex-end' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', width: '80%', paddingTop: '1em' }}>
-                    <p className='productNameLabel'>Price</p>
-                    <div style={{ width: '80%', display: 'flex', marginLeft: 'auto', margin: 0 }}>
-                      <input style={{ width: '100%', padding: '.5em 0 .5em 1em', border: '1px solid #797472', borderRadius: 5, color:'black',fontWeight:500 }} type='text' placeholder='Product Price'></input>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', paddingRight: '10rem', justifyContent: 'flex-end' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', width: '80%', paddingTop: '1em' }}>
-                    <p className='productNameLabel'>Sales</p>
-                    <div style={{ width: '80%', display: 'flex', marginLeft: 'auto', margin: 0 }}>
-                      <input style={{ width: '100%', padding: '.5em 0 .5em 1em', border: '1px solid #797472', borderRadius: 5, color:'black',fontWeight:500 }} type='text' placeholder='Product Sales Percentage'></input>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', paddingRight: '10rem', justifyContent: 'flex-end' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', width: '80%', paddingTop: '1em' }}>
-                    <p className='productNameLabel'>Stock</p>
-                    <div style={{ width: '80%', display: 'flex', marginLeft: 'auto', margin: 0 }}>
-                      <input style={{ width: '100%', padding: '.5em 0 .5em 1em', border: '1px solid #797472', borderRadius: 5, color:'black',fontWeight:500 }} type='text' placeholder='Product Amount'></input>
-                    </div>
-                  </div>
-                </div>
-
-                
-              </div>
 
               <div style={{display:'flex',justifyContent:'flex-end',gap:'1rem',padding:'2em 8em 2em 0'}}>
                 <div className='cancelAddNewProductContainer'>

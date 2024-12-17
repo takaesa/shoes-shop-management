@@ -1,0 +1,113 @@
+.sellerOrderComponentContainer{
+    display: grid;
+    grid-template-columns: 40% 15% 15% 10% 10% 10%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    grid-auto-rows: fit-content;
+    height: 90px;
+    align-items: center;
+    background-color: white;
+}
+.orderImgContainer{
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    margin-left: 1rem;
+}
+.productNameTxt{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding-left: 1rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.unitPriceTxt{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.editOption{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    color: #2E7EA3;
+}
+.editOption:hover{
+    text-decoration: underline;
+}
+.statusDropDownBtnContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+  .status-dropdown-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    list-style: none;
+    border-radius: 10px;
+  }
+  .status-dropdown-item{
+    padding: 8px 20px;
+    cursor: pointer;
+    color: #333;
+    width: 100%;
+    z-index: 4;
+    margin-top: .1em;
+  }
+  .status-dropdown-item:hover{
+    background-color: #2E7EA3;
+    color: white;
+    border-radius: 10px;
+  }
+  .statusDropDownBtn{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    border: 1px solid #2E7EA3;
+    width: 100%;
+    padding: .5em 0 .5em 1em;
+  }
+  .update-btn-container{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+  .update-btn{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: #434343;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    border: 1px solid #7c7c7c;
+    width: 100%;
+    padding: .5em 0 .5em 1em;
+  }

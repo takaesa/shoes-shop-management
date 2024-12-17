@@ -47,6 +47,7 @@
   border: 1px solid #797472;
   border-radius: 10px;
   max-height: 100vh;
+  min-height: 20vh;
 }
 .sellerproductList {
   overflow: hidden;

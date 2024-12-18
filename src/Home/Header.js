@@ -95,9 +95,9 @@ function Header() {
         </div>
         <div className="customerServices">
           <a className="serviceText" href="woman">Order Status</a>
-          <div className="vl"></div>
+          <div className="header-vl"></div>
           <a className="serviceText" href="woman">Customer Service</a>
-          <div className="vl"></div>
+          <div className="header-vl"></div>
           <a className="serviceText" href="woman">Gift Cards</a>
         </div>
       </div>

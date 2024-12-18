@@ -206,15 +206,6 @@ const Home = () => {
 
           <div style={{ display: "flex", paddingTop: "2rem" }}>
             <div className="statistic-container">
-              <div className="change-type-button-container">
-                <button onClick={() => handleChartTypeChange("line")}>
-                  Area Chart
-                </button>
-                <button onClick={() => handleChartTypeChange("doughnut")}>
-                  Donut Chart
-                </button>
-              </div>
-
               <div className="chart-container">
                 {chartType === "line" ? (
                   <Line data={chartData} options={chartOptions} />

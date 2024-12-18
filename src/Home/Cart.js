@@ -25,6 +25,7 @@ const Cart = (props) => {
   }, []);
 
   const [isOverlayVisible, setOverlayVisible] = useState(false);
+  
   const handleCheckoutClick = () => {
     setOverlayVisible(true);
   };

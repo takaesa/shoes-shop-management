@@ -5,11 +5,11 @@ import { useState } from 'react';
 import "./css/ordercomponent.css"
 
 const OrderComponent = () => {
-      const [isStatusOpen, setisStatusOpen] = useState(false);
-    
+    const [isStatusOpen, setisStatusOpen] = useState(false);
+
     const toggleDropdown = (id) => {
         setisStatusOpen(!isStatusOpen);
-      }
+    }
     return (
         <div className='sellerOrderComponentContainer'>
             <div style={{ display: 'flex', padding: '.5rem', alignItems: 'center', height: 'inherit', paddingLeft: '1.5rem' }}>
@@ -30,14 +30,17 @@ const OrderComponent = () => {
                         <li className="status-dropdown-item">To Ship</li>
                         <li className="status-dropdown-item">To Receive </li>
                         <li className="status-dropdown-item">Return/Refund</li>
-                        <li className="status-dropdown-item">Completed </li>
+                        <li className="status       -dropdown-item">Completed </li>
                         <li className="status-dropdown-item">Cancelled </li>
                     </ul>
                 )}
             </div>
-            <div className='update-btn-container'>
-                <button className='update-btn'>Update</button>
+            <div style={{display:'flex',justifyContent:'center'}}>
+                <div className='update-btn-container'>
+                    <button className='update-btn'>Update</button>
+                </div>
             </div>
+
         </div>
     )
 }

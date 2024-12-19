@@ -19,6 +19,7 @@ const ProductComponent = (...props) => {
     }
 
     const [isSellerEditProductOverlayVisible, setSellerEditProductOverlayVisible] = useState(false);
+    
     const handleEditProductClick = () => {
         setSellerEditProductOverlayVisible(true);
     }
@@ -29,7 +30,9 @@ const ProductComponent = (...props) => {
             setSellerEditProductOverlayVisible(false);
         }
     };
+    
     const checkboxlabel = "";
+
     return (
         <div className='sellerProductComponentContainer'>
             <div style={{ display: 'flex', padding: '.5rem', alignItems: 'center', height: 'inherit', paddingLeft: '1.5rem' }}>

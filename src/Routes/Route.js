@@ -8,7 +8,8 @@ import ProductTypePage from "../Home/ProductTypePage";
 import SellerHome from "../Seller/Home";
 import SellerProducts from "../Seller/Products";
 import SerllerOrders from "../Seller/Orders";
-
+import AdminCategory from "../Admin/Category";
+import AdminVouchers from "../Admin/Voucher"
 
 const Paths = {
     home: '/',
@@ -21,6 +22,8 @@ const Paths = {
     sellerhome: '/sellerhome',
     sellerproducts: '/sellerproducts',
     sellerorders: '/sellerorders',
+    admincategory: '/admin/category',
+    adminvouchers: '/admin/vouchers',
 }
 const webRoutes = [
     { path: Paths.home, component: MainScreen },
@@ -33,6 +36,8 @@ const webRoutes = [
     { path: Paths.sellerhome, component: SellerHome },
     { path: Paths.sellerproducts, component: SellerProducts },
     { path: Paths.sellerorders, component: SerllerOrders },
+    { path: Paths.admincategory, component: AdminCategory },
+    { path: Paths.adminvouchers, component: AdminVouchers },
 
 ]
 

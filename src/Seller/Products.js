@@ -40,8 +40,7 @@ const Products = (...props) => {
     if (e.target.className === "sellerAddNewProductOverlay") {
       setSellerAddProductOverlayVisible(false);
     }
-    else if (e.target.className === "sellerEditProductOverlay")
-    {
+    else if (e.target.className === "sellerEditProductOverlay") {
       setSellerEditProductOverlayVisible(false);
     }
   };
@@ -155,16 +154,16 @@ const Products = (...props) => {
                 <div>Option</div>
               </div>
               <div className='sellerproductList'>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
-                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct={() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
               </div>
             </div>
 
@@ -227,7 +226,7 @@ const Products = (...props) => {
                         </div>
                       </div>
 
-                      <div style={{ display: 'flex', width: '85%', paddingTop: '1rem', paddingBottom:'1rem' }}>
+                      <div style={{ display: 'flex', width: '85%', paddingTop: '1rem', paddingBottom: '1rem' }}>
                         <div className='productNameLabel' style={{ flex: '35%', justifyContent: 'flex-end', textAlign: 'right', paddingRight: '1rem', display: 'flex' }}>Product Descriptions</div>
                         <div style={{ flex: '65%', paddingLeft: '1rem' }}>
                           <div className='productDescriptionContainer'>
@@ -250,7 +249,7 @@ const Products = (...props) => {
               </div>
             )}
           </section>
-          
+
           <footer className="footer"></footer>
         </div>
 

@@ -14,12 +14,20 @@ import { useState } from 'react';
 import OrderComponent from './component/OrderComponent';
 
 const Orders = (...props) => {
+
+  const [openDropDown, setOpenDropDown] = useState(null);
+
+  const toggleDropdown = (id) => {
+    setOpenDropDown((prev) => (prev === id ? null : id))
+  }
+
   const [activeTab, setActiveTab] = useState("All");
 
   // Function to handle tab click
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
   return (
     <div style={{ display: "flex", height: "100vh", width: "auto" }}>
       <aside className="main-sidebar sidebar-dark-primary elevation-4">
@@ -162,37 +170,34 @@ const Orders = (...props) => {
                 <div>Status</div>
                 <div>Option</div>
               </div>
-              <div className='ordersList' style={{display:activeTab === "All" ? "":"none"}}>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
-                <OrderComponent/>
+              <div className='ordersList' style={{ display: activeTab === "All" ? "" : "none" }}>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
+                <OrderComponent id={props.id} isOpen={openDropDown === props.id} onToggle={toggleDropdown}/>
               </div>
-              <div className='ordersList' style={{display:activeTab === "To Pay" ? "grid":"none"}}>
+              <div className='ordersList' style={{ display: activeTab === "To Pay" ? "grid" : "none" }}>
                 To Pay
               </div>
-              <div className='ordersList' style={{display:activeTab === "To Ship" ? "grid":"none"}}>
+              <div className='ordersList' style={{ display: activeTab === "To Ship" ? "grid" : "none" }}>
                 To Ship
               </div>
-              <div className='ordersList' style={{display:activeTab === "To Receive" ? "grid":"none"}}>
+              <div className='ordersList' style={{ display: activeTab === "To Receive" ? "grid" : "none" }}>
                 To Receive
               </div>
-              <div className='ordersList' style={{display:activeTab === "Return/Refund" ? "grid":"none"}}>
+              <div className='ordersList' style={{ display: activeTab === "Return/Refund" ? "grid" : "none" }}>
                 Return/Refund
               </div>
-              <div className='ordersList' style={{display:activeTab === "Completed" ? "grid":"none"}}>
+              <div className='ordersList' style={{ display: activeTab === "Completed" ? "grid" : "none" }}>
                 Completed
               </div>
-              <div className='ordersList' style={{display:activeTab === "Cancelled" ? "grid":"none"}}>
+              <div className='ordersList' style={{ display: activeTab === "Cancelled" ? "grid" : "none" }}>
                 Cancelled
               </div>
             </div>

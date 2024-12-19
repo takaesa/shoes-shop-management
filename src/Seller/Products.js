@@ -156,6 +156,15 @@ const Products = (...props) => {
               </div>
               <div className='sellerproductList'>
                 <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
+                <ProductComponent onEditProduct = {() => setSellerEditProductOverlayVisible(true)}></ProductComponent>
               </div>
             </div>
 

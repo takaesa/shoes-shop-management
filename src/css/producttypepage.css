@@ -36,10 +36,10 @@
   width: max-content;
   height: max-content;
   column-gap: 0.8rem;
-  margin-left: auto;
   flex-direction: row-reverse;
   padding-right: 10px;
   cursor: pointer;
+  padding: 1rem 2rem;
 }
 .filterDropDownBtn {
   display: flex;
@@ -107,6 +107,10 @@
   border: none;
   position: relative;
 }
+.subFilterBtn:hover{
+  background-color: #2E7EA3;
+  color: white;
+}
 .sortByDropDown {
   display: flex;
   column-gap: 1rem;
@@ -121,7 +125,7 @@
   align-items: center;
 }
 .sortby-dropdown-menu{
-    position: absolute;
+  position: absolute;
   top: 100%;
   right: 0;
   width: max-content;
@@ -134,9 +138,76 @@
 }
 .productTypeContainer{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19%,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24%,1fr));
   column-gap: 1%;
-  padding: 2rem;
+  padding: 1rem 2rem;
   row-gap: 30px;
   grid-auto-rows: auto;
+}
+.filter-area{
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  margin-right: 1rem;
+  flex: 1;
+  margin-left: 2rem;
+  max-width: 22%;
+  max-height: fit-content;
+  position: sticky;
+  top: 5%;
+  left: 0;
+}
+.clearAllBtn{
+  border: none;
+  background-color: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #666;
+}
+.filter-accordion{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 8px 0;
+}
+.accordion-btn{
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 1em;
+}
+.arrow-expanded{
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+.arrow-collapsed{
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+}
+.accordion-content{
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  margin-left: 1em;
+}
+.filter-options{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.apply-filter-btn
+{
+  margin-top: 12px;
+  padding: 8px;
+  background: #2E7EA3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.accordion-title{
+  margin-left: 1em;
 }

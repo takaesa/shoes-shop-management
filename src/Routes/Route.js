@@ -9,7 +9,9 @@ import SellerHome from "../Seller/Home";
 import SellerProducts from "../Seller/Products";
 import SerllerOrders from "../Seller/Orders";
 import AdminCategory from "../Admin/Category";
-import AdminVouchers from "../Admin/Voucher"
+import AdminVouchers from "../Admin/Voucher";
+import AdminManageSellers from "../Admin/Sellers"
+import AdminManageUsers from "../Admin/Users"
 
 const Paths = {
     home: '/',
@@ -24,6 +26,8 @@ const Paths = {
     sellerorders: '/sellerorders',
     admincategory: '/admin/category',
     adminvouchers: '/admin/vouchers',
+    adminmanagesellers: '/admin/managesellers',
+    adminmanageusers: '/admin/manageusers',
 }
 const webRoutes = [
     { path: Paths.home, component: MainScreen },
@@ -38,6 +42,8 @@ const webRoutes = [
     { path: Paths.sellerorders, component: SerllerOrders },
     { path: Paths.admincategory, component: AdminCategory },
     { path: Paths.adminvouchers, component: AdminVouchers },
+    { path: Paths.adminmanagesellers, component: AdminManageSellers },
+    { path: Paths.adminmanageusers, component: AdminManageUsers },
 
 ]
 

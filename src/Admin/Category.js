@@ -75,12 +75,12 @@ const Category = (...props) => {
                                 </a>
                             </li>
                             <li className=" ">
-                                <a className="menuItem" href="/admin/users">
+                                <a className="menuItem" href="/admin/manageusers">
                                     Users
                                 </a>
                             </li>{" "}
                             <li className=" ">
-                                <a className="menuItem" href="/admin/sellers">
+                                <a className="menuItem" href="/admin/managesellers">
                                     Sellers
                                 </a>
                             </li>{" "}

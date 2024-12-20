@@ -1,8 +1,8 @@
 import React from 'react'
 import "./css/categorycomponent.css"
+
 import { useState } from 'react'
 import product from "../../svg/product.svg"
-
 import arrowexpand from "../../svg/arrowexpand.svg"
 import chooseproductimg from "../../svg/chooseproductimg.svg"
 const CategoryComponent = (...props) => {

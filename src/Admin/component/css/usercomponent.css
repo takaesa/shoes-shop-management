@@ -1,0 +1,76 @@
+.adminManageUserComponentContainer {
+    display: grid;
+    grid-template-columns: 40% 15% 10% 10% 15% 10%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    grid-auto-rows: fit-content;
+    height: 100px;
+    align-items: center;
+    background-color: white;
+  }
+  .manageUserProfileImgContainer {
+    height: 100%;
+    aspect-ratio: 5/4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #797472;
+  }
+  .userNameTxt {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding-left: 1rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .phonenumberTxt {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  .delete-btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 2.5rem;
+      border-radius: 8px;
+      background-color: #ff0000;
+      color: white;
+      cursor: pointer;
+    }
+    .viewActivityBtnContainer{
+      text-align: center;
+      text-decoration: underline;
+      color: #2e7ea3;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    .adminDeleteUserOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.699);
+      display: flex;
+      justify-content: center;
+      z-index: 2000;
+      padding-top: 5rem;
+    }
+    
+    .adminDeleteUserOverlay-content {
+      background: #fff;
+      border-radius: 8px;
+      min-width: 35%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }

@@ -70,7 +70,7 @@ const Category = (...props) => {
                                 </a>
                             </li>
                             <li className="">
-                                <a className="menuItem" href="/admin/voucher">
+                                <a className="menuItem" href="/admin/vouchers">
                                     Vouchers
                                 </a>
                             </li>
@@ -129,7 +129,7 @@ const Category = (...props) => {
                     </div>
                 </header>
                 <div>
-                    {activeContent === "productList" && <section className="totalProductContainer">
+                    <section className="totalProductContainer">
                         <div style={{ display: 'flex', paddingBottom: '1rem' }}>
                             <div className="sellersearch">
                                 <img className="Icon" src={searchIcon} alt="searchIcon" />
@@ -149,17 +149,17 @@ const Category = (...props) => {
                             </div>
                             <hr class="total-amount-separator" />
 
-                            <div className='description-bar'>
+                            <div className='category-description-bar'>
                                 <div style={{ justifySelf: 'flex-start', paddingLeft: '2em' }}>Categories</div>
                                 <div>Shop Sales</div>
                                 <div>Options</div>
                             </div>
                             <div className='adminproductList'>
-                                <CategoryComponent editProduct={() => setAdminEditProductOverlayVisible(true)} deleteProduct ={()=>setAdminDeleteProductOverlayVisible(true)}> </CategoryComponent>
+                                <CategoryComponent editProduct={() => setAdminEditProductOverlayVisible(true)} deleteProduct={() => setAdminDeleteProductOverlayVisible(true)}> </CategoryComponent>
                             </div>
                         </div>
 
-                    </section>}
+                    </section>
 
                     <section className="addNewProductContainer">
                         {isAdminAddProductOverlayVisible && (

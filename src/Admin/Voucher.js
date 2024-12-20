@@ -14,29 +14,29 @@ import arrowexpand from "../svg/arrowexpand.svg"
 import { useState } from 'react';
 
 import CategoryComponent from './component/CategoryComponent';
-const Voucher = (...props) => {const [isAdminAddProductOverlayVisible, setAdminAddProductOverlayVisible] = useState(false);
-    const [isAdminEditProductOverlayVisible, setAdminEditProductOverlayVisible] = useState(false);
-    const [isAdminDeleteProductOverlayVisible, setAdminDeleteProductOverlayVisible] = useState(false);
+import VoucherComponent from './component/VoucherComponent';
+const Voucher = (...props) => {
+    const [isAdminAddVoucherOverlayVisible, setAdminAddVoucherOverlayVisible] = useState(false);
+    const [isAdminEditVoucherOverlayVisible, setAdminEditVoucherOverlayVisible] = useState(false);
+    const [isAdminDeleteVoucherOverlayVisible, setAdminDeleteVoucherOverlayVisible] = useState(false);
 
     const [isBrandOpen, setisBrandOpen] = useState(false);
     const toggleDropdown = (id) => {
         setisBrandOpen(!isBrandOpen);
     }
-    const [activeContent, setActiveContent] = useState("productList");
-
-    const handleAddNewProductClick = () => {
-        setAdminAddProductOverlayVisible(true);
+    const handleAddNewVoucherClick = () => {
+        setAdminAddVoucherOverlayVisible(true);
     };
 
     const handleOverlayBackgroundClick = (e) => {
-        if (e.target.className === "adminAddProductOverlay") {
-            setAdminAddProductOverlayVisible(false);
+        if (e.target.className === "adminAddVoucherOverlay") {
+            setAdminAddVoucherOverlayVisible(false);
         }
-        else if (e.target.className === "adminEditProductOverlay") {
-            setAdminEditProductOverlayVisible(false);
+        else if (e.target.className === "adminEditVoucherOverlay") {
+            setAdminEditVoucherOverlayVisible(false);
         }
-        else if (e.target.className === "adminDeleteProductOverlay") {
-            setAdminDeleteProductOverlayVisible(false);
+        else if (e.target.className === "adminDeleteVoucherOverlay") {
+            setAdminDeleteVoucherOverlayVisible(false);
         }
     };
 
@@ -127,41 +127,47 @@ const Voucher = (...props) => {const [isAdminAddProductOverlayVisible, setAdminA
                     </div>
                 </header>
                 <div>
-                    {activeContent === "productList" && <section className="totalProductContainer">
+                    <section className="totalVoucherContainer">
                         <div style={{ display: 'flex', paddingBottom: '1rem' }}>
                             <div className="sellersearch">
                                 <img className="Icon" src={searchIcon} alt="searchIcon" />
                                 <div className="vl"></div>
-                                <input className='searchInputfield' placeholder='Search styles, brands & more'></input>
+                                <input className='searchInputfield' placeholder='Search vouchers'></input>
                             </div>
-                            <div className="adminAddNewProductBtnContainer">
-                                <button className='adminAddNewProductBtn' onClick={() => handleAddNewProductClick()}>Add New Product</button>
+                            <div className="adminAddNewVoucherBtnContainer">
+                                <button className='adminAddNewVoucherBtn' onClick={() => handleAddNewVoucherClick()}>Add New Voucher</button>
                             </div>
                         </div>
-                        <div className='productMainContent'>
+                        <div className='voucherMainContent'>
                             <div className="totalAmount">
-                                <p style={{ fontSize: 18, margin: 0, fontWeight: 600, display: 'flex', alignItems: 'center' }}>Total Products ({props.amount}100)</p>
-                                <div className='selectAllProductBtnContainer'>
-                                    <button className="selectAllProductBtn">Select All</button>
+                                <p style={{ fontSize: 18, margin: 0, fontWeight: 600, display: 'flex', alignItems: 'center' }}>Total Voucher ({props.amount}100)</p>
+                                <div className='selectAllVoucherBtnContainer'>
+                                    <button className="selectAllVoucherBtn">Select All</button>
                                 </div>
                             </div>
+
                             <hr class="total-amount-separator" />
 
-                            <div className='description-bar'>
-                                <div style={{ justifySelf: 'flex-start', paddingLeft: '2em' }}>Categories</div>
-                                <div>Shop Sales</div>
-                                <div>Options</div>
+                            <div className='voucher-description-bar'>
+                                <div style={{ justifySelf: 'flex-start', paddingLeft: '2em' }}>Voucher Name</div>
+                                <div>Discount</div>
+                                <div>Min Order Price</div>
+                                <div>Used</div>
+                                <div>Status Date</div>
+                                <div>Option</div>
                             </div>
-                            <div className='adminproductList'>
 
-                                <CategoryComponent editProduct={() => setAdminEditProductOverlayVisible(true)} deleteProduct ={()=>setAdminDeleteProductOverlayVisible(true)}> </CategoryComponent>
+                            <div className='adminVoucherList'>
+
+                                {/* <CategoryComponent editProduct={() => setAdminEditVoucherOverlayVisible(true)} deleteProduct={() => setAdminDeleteVoucherOverlayVisible(true)}> </CategoryComponent> */}
+                                <VoucherComponent editProduct={() => setAdminEditVoucherOverlayVisible(true)} deleteProduct={() => setAdminDeleteVoucherOverlayVisible(true)}> </VoucherComponent>
                             </div>
                         </div>
 
-                    </section>}
+                    </section>
 
                     <section className="addNewProductContainer">
-                        {isAdminAddProductOverlayVisible && (
+                        {isAdminAddVoucherOverlayVisible && (
                             <div className="adminAddProductOverlay" onClick={handleOverlayBackgroundClick}>
                                 <div className="adminAddProductOverlay-content">
                                     <div>

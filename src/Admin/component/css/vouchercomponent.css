@@ -1,0 +1,263 @@
+.adminVoucherComponentContainer {
+  display: grid;
+  grid-template-columns: 40% 10% 10% 10% 10% 20%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  grid-auto-rows: fit-content;
+  height: 90px;
+  align-items: center;
+  background-color: white;
+}
+.voucherImgContainer {
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  margin-left: 0;
+}
+.voucherNameTxt {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding-left: 1rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.options-btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.edit-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  border-radius: 8px;
+  background-color: #2e7ea3;
+  color: white;
+  cursor: pointer;
+}
+.delete-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  border-radius: 8px;
+  background-color: #ff0000;
+  color: white;
+  cursor: pointer;
+}
+
+.discountTxt {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+/* overlay */
+.adminEditProductOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: center;
+  z-index: 2000;
+  padding-top: 5rem;
+}
+
+.adminEditProductOverlay-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: fit-content;
+}
+.adminDeleteProductOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: center;
+  z-index: 2000;
+  padding-top: 5rem;
+}
+
+.adminDeleteProductOverlay-content {
+  background: #fff;
+  border-radius: 8px;
+  min-width: 35%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancelDeleteProductBtn {
+  display: flex;
+  align-items: center;
+  color: #777777;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.deleteProductBtn {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.cancelDeleteVoucherContainer {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #777777;
+  padding: 0.5em 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.deleteVoucherContainer {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #777777;
+  padding: 0.5em 0;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #2e7ea3;
+}
+
+.chooseVoucherImgsContainer {
+  cursor: pointer;
+}
+
+/* overlay */
+.adminEditVoucherOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: center;
+  z-index: 2000;
+  padding-top: 5rem;
+}
+.adminEditVoucherOverlay-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: fit-content;
+}
+.adminDeleteVoucherOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: center;
+  z-index: 2000;
+  padding-top: 5rem;
+}
+.editVoucherContainer {
+  padding: 1rem 2rem 0 2rem;
+  width: 100%;
+  height: fit-content;
+}
+.cancelAddNewVoucherContainer {
+  display: flex;
+}
+.cancelAddNewVoucherBtn {
+  display: flex;
+  align-items: center;
+  color: #777777;
+  padding: 0.7rem 3rem;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid #777777;
+}
+.publishNewVoucherContainer {
+  display: flex;
+}
+.publishNewVoucherBtn {
+  display: flex;
+  align-items: center;
+  background-color: #2e7ea3;
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  cursor: pointer;
+}
+.adminDeleteVoucherOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: center;
+  z-index: 2000;
+  padding-top: 5rem;
+}
+.adminDeleteVoucherOverlay-content {
+  background: #fff;
+  border-radius: 8px;
+  min-width: 35%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancelDeleteVoucherContainer {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #777777;
+  padding: 0.5em 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.deleteVoucherContainer {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #777777;
+  padding: 0.5em 0;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #2e7ea3;
+  color: white;
+}

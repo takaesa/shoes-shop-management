@@ -51,10 +51,6 @@
   cursor: pointer;
 }
 
-.description-bar {
-  display: grid;
-  grid-template-columns: 50% 25% 25%;
-}
 .shopSalesTxt {
   text-align: center;
   font-size: 1.2em;
